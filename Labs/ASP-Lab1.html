@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>My second web page</title>
+      <meta name='author' content='Aaron Colclough' />
+      <script>
+        <!-- no script yet -->
+      </script>
+      <style>
+      </style>
+  </head>
+  <body>
+      <a id='top' />
+      <a href="#bottom">Go To Bottom</a>
+    <h1>My second web page</h1>
+      <p>Hello world. How do you like it?</p>
+      <p>In-line tags display across the page.
+        <i>This is italic.</i>
+        <b>This is bold</b>
+        <b><i>This is bold italic. Notice that the tags must be closed in the reverse order of opening.</i></b></p>
+    <h1>Examples of DIV and SPAN</h1>
+      <hr />
+      <div>This is the first div element.</div>
+      <div>This is the second div element.</div>
+      <div>This is the third div element.</div>
+      <br />
+      <span>This is the first span element.</span>
+      <br />
+      <span>This is the second span element.</span>
+      <br />
+      <span>This is the third span element.</span>
+      <hr />
+    <h1>Examples of hyperlinks</h1>
+    <a href="http://google.com">Google</a> <br />
+    <a href="http://youtube.com">Youtube</a> <br />
+      <a id="bottom" />
+      <a href="#top">Go To Top</a>
+    <h1>Example of an HTML table</h1>
+      <table rules="all">
+        <caption>Programming Languages</caption>
+        <tr>
+          <th>Paradigm</th>
+          <th colspan="3">Description</th>
+        </tr>
+        <tr>
+          <th rowspan="2">Procedural</th>
+          <td>COBOL</td>
+          <td>Grace Hopper</td>
+          <td>1959</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>Thompson</td>
+          <td>1972</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Functional</th>
+          <td>Lisp</td>
+          <td>John McCarthy</td>
+          <td>1958</td>
+        </tr>
+        <tr>
+          <td>Haskell</td>
+          <td>Committee</td>
+          <td>1990</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Object Oriented</th>
+          <td>Java</td>
+          <td>James Gosling</td>
+          <td>1990</td>
+        </tr>
+        <tr>
+          <td>C#</td>
+          <td>Anders Hejlsberg</td>
+          <td>1999</td>
+        </tr>
+    <h1>My first HTML form</h1>
+    <form method="get" action = ''>
+      <p>This is my form.</p>
+      Hidden input: <input type="hidden" name="not\_shown" value="This does not appear to the user." /> <br />
+      Text input: <input type="text" name="my\_name" id="my_name" value="Enter your first name" onfocus="my\_name.value = """/> <br />
+      Password input: <input type="password" name="my\_password" /> <br />
+      Range input: <input type="range" name="my\_range" id="my_range" value="50" min="0" max="100" step="5" oninput="range\_display.value = my_range.value"> <output id="range\_display"></output> <br />
+      Color input: <input type="color" name="my-color" /> <br />
+    </form>
+  </body>
+</html>
