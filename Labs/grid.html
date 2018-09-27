@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .page {
+      display: grid;
+      grid-template-columns: 50px 50px;
+      grid-template-rows: 100px 50px 150px 150px 50px 100px;
+    }
+    .box{
+      border: solid black 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #head {
+      grid-column-start: 1;
+      grid-column-end: 6;
+      background-color: #ffff00;
+
+    }
+    #topbar {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 6;
+      background-color: #ff0000;
+    }
+    #sidebar {
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-color: #ff00ff;
+    }
+    #main {
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 3;
+      grid-column-end: 6;
+      background-color: #00ffff;
+    }
+    #bottombar {
+      grid-row-start: 5;
+      grid-row-end: 6;
+      grid-column-start: 1;
+      grid-column-end: 6;
+      background-color: #0000ff;
+    }
+    #foot {
+      grid-row-start: 6;
+      grid-column-start: 1;
+      grid-column-end: 6;
+      background-color: #00ff00;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="box" id="head">HEAD</div>
+      <div class="box" id="topbar">TOPBAR</div>
+      <div class="box" id="sidebar">SIDEBAR</div>
+      <div class="box" id="main">MAIN</div>
+      <div class="box" id="bottombar">BOTTOMBAR</div>
+      <div class="box" id="foot">FOOT</div>
+    </div>
+  </body>
+</html>
