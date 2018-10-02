@@ -11,19 +11,16 @@ namespace LanguageFeatures.Controllers
     {
         public ViewResult Index()
         {
-            ShoppingCart cart = new ShoppingCart { Products = Product.GetProducts() };
-            Product[] productArray = 
+            ShoppingCart cart = new ShoppingCart { Products = Product.GetProducts() };            
+            var products = new[]
             {
                 new Product { Name = "Kayak", Price = 275M },
                 new Product { Name = "Lifejacket", Price = 48.95M },
                 new Product { Name = "Soccer ball", Price = 19.50M },
                 new Product { Name = "Corner flag", Price = 34.95M }
             };
-            decimal cartTotal = cart.TotalPrices();
-            decimal arrayTotal = productArray.TotalPrices();
-            decimal priceTotal = productArray.FilterByPrice(20).TotalPrices();
-            return View("Index", new string[] { $"Cart Total: {cartTotal:C2}",
-                $"Array Total: {arrayTotal:C2}", $"Price Total: {priceTotal:C2}" });
+            return View(products.Select(p => $"{nameof(p.Name)}: {p.Name}, " +
+                $"{nameof(p.Price)}: {p.Price}"));
 
             /*
             decimal cartTotal = cart.TotalPrices();
